@@ -23,7 +23,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>Hello parcel, fuck vite!</p>
         <p>
           <button type="button" onClick={() => makeRequest()}>
