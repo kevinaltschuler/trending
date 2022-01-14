@@ -2,22 +2,15 @@
   "name": "trending",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "parcel ./index.html",
+    "build": "parcel build ./index.html"
   },
   "dependencies": {
-    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
-    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
     "google-trends-api": "^4.9.2",
-    "querystring": "^0.2.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-polyfills": "^0.2.1"
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^1.0.7",
-    "vite": "^2.7.2"
+    "parcel": "^2.2.0"
   }
 }
