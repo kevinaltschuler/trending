@@ -2,6 +2,22 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 
+import googleTrends from 'google-trends-api';
+
+// googleTrends.realTimeTrends({ geo: 'US' }, (err, results) => {
+//   console.log(err, results)
+// })
+
+const makeRequest = () => {
+  googleTrends.interestOverTime({ keyword: 'Women\'s march' })
+    .then(function (results) {
+      console.log('These results are awesome', results);
+    })
+    .catch(function (err) {
+      console.error('Oh no there was an error', err);
+    });
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -11,7 +27,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button type="button" onClick={() => makeRequest()}>
             count is: {count}
           </button>
         </p>
