@@ -1,21 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
 
-import googleTrends from 'google-trends-api';
-
-// googleTrends.realTimeTrends({ geo: 'US' }, (err, results) => {
-//   console.log(err, results)
-// })
-
-const makeRequest = () => {
-  googleTrends.interestOverTime({ keyword: 'Women\'s march' })
-    .then(function (results) {
-      console.log('These results are awesome', results);
-    })
-    .catch(function (err) {
-      console.error('Oh no there was an error', err);
-    });
-}
 
 function App() {
   const [count, setCount] = useState(0)

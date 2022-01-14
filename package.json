@@ -2,15 +2,24 @@
   "name": "trending",
   "version": "0.0.0",
   "scripts": {
-    "start": "parcel ./index.html",
+    "start": "parcel ./index.html & node server.js",
+    "serve": "node server.js",
     "build": "parcel build ./index.html"
   },
   "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.2",
     "google-trends-api": "^4.9.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "parcel": "^2.2.0"
   }
 }
